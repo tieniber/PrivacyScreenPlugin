@@ -5,8 +5,7 @@
   "cordova": {
     "id": "cordova-plugin-privacyscreen",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "repository": {
