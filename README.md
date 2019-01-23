@@ -1,3 +1,14 @@
+## Note: this fork removes all iOS functionality and leaves just the Android part.
+The iOS functionality was showing squished splash screen on the iPhone X+. So, for iOS, we've decided to just use listeners to the resign and active events in Cordova to show and hide the splash screen:
+```javascript
+document.addEventListener("deviceReady", function() {
+    if(cordova.platform === "iOS") {
+        document.addEventListener("resign", function(){window.navigator.splashscreen.show();},false);
+        document.addEventListener("active", function(){window.navigator.splashscreen.hide();},false);
+    }
+});
+```
+
 PrivacyScreenPlugin
 ==================
 
